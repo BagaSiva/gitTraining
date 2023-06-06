@@ -19,16 +19,17 @@ This document describes the vSphere automation in the ROME datacenter. The autom
 - Checking IP availability
 - Configuring IP4 properties (static IP, gateway, subnet mask, preferred DNS, and alternate DNS)
 
-## Steps to Build the Automation Client Image and Jenkins Job for vCenter Admin Tasks
+**Steps to Build the Automation Client Image and Jenkins Job for vCenter Admin Tasks**
+---
 
-**Build Automation Client**
+*Build Automation Client*
 ---
 
 1. Run the following Jenkins job to build the vCenter automation client image and push it to the JFROG repository:
 
    **Jenkins job URL:** [http://sup.jenkins.dev.com/vm/job/Jenkins_job_Automation_Client/](http://sup.jenkins.dev.com/vm/job/Jenkins_job_Automation_Client/)
 
-   ### This job performs the following tasks: 
+   ## This job performs the following tasks: 
    
    - Checkout the `bigfix-docker` repository:
 
