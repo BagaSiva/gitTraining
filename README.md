@@ -3,13 +3,13 @@
 This document describes the VSphere automation in ROME datacenter. This automation client leverages vSphere Automation SDK for Java, Powershell, VMware PowerCLI and bash scripts. The VM will be spun up based on the selected template which is already created with the prereqisites. 
 
 It automates the following vSphere admin tasks:
-Create VM
-  -supports to create Windows10, Windows11, Windows Server 16 and CentOS7
-Assign Owner/Assignee to the provisioned VM
-Configure Hostname
-Check the IP availability
-Cofigure IP4 properties
-   - Configure StaticIP, Gateway, Subnet mask, Preferred DNS and Alternate DNS
+```Create VM
+      ```-supports to create Windows10, Windows11, Windows Server 16 and CentOS7
+```Assign Owner/Assignee to the provisioned VM
+```Configure Hostname
+```Check the IP availability
+```Cofigure IP4 properties
+      ```- Configure StaticIP, Gateway, Subnet mask, Preferred DNS and Alternate DNS
 
 ## Steps to build the automation client image and Jenkins job that performs vCenter admin tasks.
 
