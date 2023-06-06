@@ -27,17 +27,17 @@ This document describes the vSphere automation in the ROME datacenter. The autom
 
 1. Run the following Jenkins job to build the vCenter automation client image and push it to the JFROG repository:
 
-   **Jenkins job URL:** [http://sup.jenkins.dev.com/vm/job/Jenkins_job_Automation_Client/](http://sup.jenkins.dev.com/vm/job/Jenkins_job_Automation_Client/)
+   **Jenkins job URL:** [http://bigfix-jenkins.nonprod.hclpnp.com:8080/view/Infrastructure/job/Bigfix_VCenter_Build_Automation_Client/](http://bigfix-jenkins.nonprod.hclpnp.com:8080/view/Infrastructure/job/Bigfix_VCenter_Build_Automation_Client/)
 
    #### This job performs the following tasks: 
    
-   - Checkout the `bigfix-docker` repository:
+   - Checkout [bigfix-docker](git@github02.hclpnp.com:besuem/bigfix-docker.git)
      ```bash
-     git clone git@github.com:prog/vm-automation.git
+     git clone git@github02.hclpnp.com:besuem/bigfix-docker.git
      ```
    - Execute the `make` command to build the vCenter automation client image:
      ```bash
-     make build-automation-client
+      make build-vcenter-automation-client
      ```
    - Tag the build number with the Docker image and push it to the JFROG Docker registry.
 
@@ -46,7 +46,7 @@ This document describes the vSphere automation in the ROME datacenter. The autom
 
 2. Run the following Jenkins job to create a VM, configure the hostname, and configure IP4 properties:
 
-   **Jenkins job URL:** [http://sup.jenkins.dev.com/vm/job/Jenkins_job_Create_VM/](http://sup.jenkins.dev.com/vm/job/Jenkins_job_Create_VM/)
+   **Jenkins job URL:** [http://bigfix-jenkins.nonprod.hclpnp.com:8080/view/Infrastructure/job/Bigfix_VCenter_Create_VM/](http://bigfix-jenkins.nonprod.hclpnp.com:8080/view/Infrastructure/job/Bigfix_VCenter_Create_VM/ )
 
    #### This job performs the following tasks: 
 
@@ -66,10 +66,10 @@ This document describes the vSphere automation in the ROME datacenter. The autom
 ---
 3. Run the following Jenkins job to delete a VM:
 
-   **Jenkins job URL:** [http://sup.jenkins.dev.com/vm/job/Jenkins_job_Delete_VM/](http://sup.jenkins.dev.com/vm/job/Jenkins_job_Delete_VM/)
+   **Jenkins job URL:** [http://bigfix-jenkins.nonprod.hclpnp.com:8080/view/Infrastructure/job/Bigfix_VCenter_Delete_VM/](http://bigfix-jenkins.nonprod.hclpnp.com:8080/view/Infrastructure/job/Bigfix_VCenter_Delete_VM/)
 
 *Update Hostname and Static IP*
 ---
 4. Run the following Jenkins job to update the hostname and static IP for a given VM:
 
-   **Jenkins job URL:** [http://sup.jenkins.dev.com/vm/job/Jenkins_job_Update_VM/](http://sup.jenkins.dev.com/vm/job/Jenkins_job_Update_VM/)
+   **Jenkins job URL:** [http://bigfix-jenkins.nonprod.hclpnp.com:8080/view/Infrastructure/job/Bigfix_VCenter_Update_VM/](http://bigfix-jenkins.nonprod.hclpnp.com:8080/view/Infrastructure/job/Bigfix_VCenter_Update_VM/)
