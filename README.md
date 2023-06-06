@@ -30,7 +30,6 @@ This document describes the vSphere automation in the ROME datacenter. The autom
    This job performs the following tasks:
 
    1.1. Checkout the `bigfix-docker` repository:
-
        ```bash
        git clone git@github.com:prog/vm-automation.git
        ```
