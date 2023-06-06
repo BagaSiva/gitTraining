@@ -32,26 +32,22 @@ This document describes the vSphere automation in the ROME datacenter. The autom
    #### This job performs the following tasks: 
    
    - Checkout the `bigfix-docker` repository:
-
      ```bash
      git clone git@github.com:prog/vm-automation.git
      ```
-
    - Execute the `make` command to build the vCenter automation client image:
-
      ```bash
      make build-automation-client
      ```
-
    - Tag the build number with the Docker image and push it to the JFROG Docker registry.
 
-### Create VM, Configure Hostname, and Configure IP4 Properties
+*Create VM, Configure Hostname, and Configure IP4 Properties*
+---
 
 2. Run the following Jenkins job to create a VM, configure the hostname, and configure IP4 properties:
-
    **Jenkins job URL:** [http://sup.jenkins.dev.com/vm/job/Jenkins_job_Create_VM/](http://sup.jenkins.dev.com/vm/job/Jenkins_job_Create_VM/)
 
-   This job performs the following tasks:
+   #### This job performs the following tasks: 
 
    - Remove the automation container if it already exists.
 
@@ -62,19 +58,15 @@ This document describes the vSphere automation in the ROME datacenter. The autom
    - Check the IP availability. The job will mark it as a failure in case of an IP conflict.
 
    - Create a VM based on the selected template, configure the hostname, and configure IP4 properties (static IP, gateway, subnet mask, preferred DNS, and alternate DNS):
-
      ```bash
      docker exec vcenter /app/scripts/create-vm.sh
      ```
-
-### Delete VM
-
+*Delete VM*
+---
 3. Run the following Jenkins job to delete a VM:
-
    **Jenkins job URL:** [http://sup.jenkins.dev.com/vm/job/Jenkins_job_Delete_VM/](http://sup.jenkins.dev.com/vm/job/Jenkins_job_Delete_VM/)
 
-### Update Hostname and Static IP
-
+*Update Hostname and Static IP*
+---
 4. Run the following Jenkins job to update the hostname and static IP for a given VM:
-
    **Jenkins job URL:** [http://sup.jenkins.dev.com/vm/job/Jenkins_job_Update_VM/](http://sup.jenkins.dev.com/vm/job/Jenkins_job_Update_VM/)
