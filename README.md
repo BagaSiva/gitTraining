@@ -64,9 +64,11 @@ This document describes the vSphere automation in the ROME datacenter. The autom
 *Delete VM*
 ---
 3. Run the following Jenkins job to delete a VM:
+
    **Jenkins job URL:** [http://sup.jenkins.dev.com/vm/job/Jenkins_job_Delete_VM/](http://sup.jenkins.dev.com/vm/job/Jenkins_job_Delete_VM/)
 
 *Update Hostname and Static IP*
 ---
 4. Run the following Jenkins job to update the hostname and static IP for a given VM:
+
    **Jenkins job URL:** [http://sup.jenkins.dev.com/vm/job/Jenkins_job_Update_VM/](http://sup.jenkins.dev.com/vm/job/Jenkins_job_Update_VM/)
