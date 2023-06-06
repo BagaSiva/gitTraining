@@ -27,7 +27,8 @@ This document describes the vSphere automation in the ROME datacenter. The autom
 
    **Jenkins job URL:** [http://sup.jenkins.dev.com/vm/job/Jenkins_job_Automation_Client/](http://sup.jenkins.dev.com/vm/job/Jenkins_job_Automation_Client/)
 
-   This job performs the following tasks:   
+   This job performs the following tasks: 
+   ---
 
    - Checkout the `bigfix-docker` repository:
 
