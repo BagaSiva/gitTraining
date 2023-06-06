@@ -45,6 +45,7 @@ This document describes the vSphere automation in the ROME datacenter. The autom
 ---
 
 2. Run the following Jenkins job to create a VM, configure the hostname, and configure IP4 properties:
+
    **Jenkins job URL:** [http://sup.jenkins.dev.com/vm/job/Jenkins_job_Create_VM/](http://sup.jenkins.dev.com/vm/job/Jenkins_job_Create_VM/)
 
    #### This job performs the following tasks: 
